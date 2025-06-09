@@ -1,0 +1,195 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{hyperref}
+\usepackage{tikz}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{enumitem}
+\usepackage{wasysym}
+\usepackage{ulem}
+\usepackage{xspace}
+\usepackage{booktabs}
+\usepackage{physics}
+
+\ifPDFTeX % ensure generation of machine readable output
+\input{glyphtounicode}
+\pdfgentounicode=1
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\fi
+
+\usepackage{csquotes}
+
+\DeclareMathOperator{\dist}{dist}
+\DeclareMathOperator{\Nul}{Nul}
+\DeclareMathOperator{\Row}{Row}
+\DeclareMathOperator{\proj}{proj}
+
+\setlength{\arraycolsep}{12pt}
+
+\newcommand{\Eg}{\textbf{Eg.}\xspace}
+\newcommand{\Ex}{\textbf{Ex.}\xspace}
+\newcommand{\Ie}{\textbf{I.e.}\xspace}
+\newcommand{\bigEps}{\mathcal{E}}
+\newcommand{\bproof}{\textit{Proof ($\impliedby$).}\xspace}
+\newcommand{\defn}{\textbf{Def.}\xspace}
+\newcommand{\eg}{\textbf{e.g.}\xspace}
+\newcommand{\ex}{\textbf{ex.}\xspace}
+\newcommand{\fproof}{\textit{Proof ($\implies$).}\xspace}
+\newcommand{\ie}{\textbf{i.e.}\xspace}
+\newcommand{\lemma}{\textit{Lemma}\xspace}
+\newcommand{\soln}{\textit{Soln.}\xspace}
+\newcommand{\thm}{\textbf{Thm.}\xspace}
+
+\renewcommand{\arraystretch}{1.25} % Adjust row spacing
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=blue,      
+    urlcolor=blue,
+}
+
+\newcommand{\ulhref}[2]{\href{#1}{\color{blue}\uline{#2}}}
+
+\begin{document}
+
+\title{LING 190 Lecture 0 - Introduction}
+\author{Alexander Ng}
+\date{May 12, 2025}
+
+\maketitle
+
+\section{Speech Acoustics}
+
+\subsection{Basic Terminology}
+
+\begin{itemize}
+  \item Transverse Waves: Not soundwaves
+  \item Longitudinal Waves: Back and forth movement of particles, which is a
+    transfer of energy from one particle to another. Motion is linear.
+  \item Periodic sounds: Pressure wave of a specific shape is repeated (think
+    tone)
+  \item Aperiodic: No repeating pattern (think white noise)
+  \item Transient Aperiodic Sounds: Aperiodic sounds that last for a short
+    time.
+    \begin{itemize}
+    \item Think the \enquote{ch} sound in \enquote{speech}
+    \end{itemize}
+\end{itemize}
+
+\subsubsection{Some Lawful Relations}
+
+Wavelength $(\lambda)$ is a measure of distance (in metres)
+
+Period $(P)$ is a measure of time (in seconds)
+
+Frequency $(f)$ is a measure of cycles per second (in Hz, $s^{-1}$)
+
+\[
+f = \frac{\text{speed of sound}}{\lambda}
+.\]
+
+\[
+  \lambda = \frac{\text{speed of sound}}{f}
+.\]
+
+\[
+  P = \frac{1}{f}
+.\]
+
+\subsubsection{Three kinds of information useful for describing periodic sound
+waves}
+
+\begin{enumerate}
+  \item Frequency: Cycles per second, or Hz, which we perceive as pitch
+  \item Amplitude: Displacement of the wave (not the same as intensity or loudness)
+  \item Phase: How a wave starts
+    \begin{enumerate}
+      \item Note: we do not perceive phase
+      \item Basically the offset or angle of the wave from the x-axis, at the start
+        of the wave.
+    \end{enumerate}
+\end{enumerate}
+
+\subsection{Frequency}
+
+\begin{itemize}
+\item Lower frequency = lower pitch
+\item Higher frequency = higher pitch
+\item Humans hear a wide range of frequencies, roughly from 20 Hz to 20,000 Hz
+\end{itemize}
+
+\subsection{Loudness}
+
+\begin{itemize}
+  \item Not the same thing as amplitude
+  \item Frequency \textbf{and} amplitude affect loudness (total amount of
+    \enquote{energy} in a wave)
+  \item Measured in dB (decibels/decibel scale)
+  \item deci = 1/10th of a Bel (Named after Alexander Graham Bell)
+    \[
+      L_p = 20\log_{10}\pqty{\frac{p_{\text{rms}}}{p_{\text{ref}}}} dB
+    .\]
+  \item This measure is a ratio of sound energy over area (Watts/Metre Squared)
+    = \enquote{sound pressure level} (SPL).
+  \item The Decibel Scale is a logarithmic scale. 
+  \item For human hearing of loudness, a \enquote{referencd} SPL is used (\ie
+    $p_{\text{ref}}$ is the \textit{lowest} threashold of human hearing)
+\end{itemize}
+
+\subsubsection{Example}
+
+60dB SPL is 1,000 times louder than the threshold of human hearing.
+
+Loudness (in dB SPL)
+
+\begin{align*}
+&= 20 \times \log_{10}\pqty{1000 p_{\text{rms}}/p_{\text{ref}}} \\
+&= 20 \times \log_{10}\pqty{1000} \\
+&= 20 \times 3 \\
+&= 60 \text{dB} \\
+\end{align*}
+
+\section{Digitizing Sound}
+
+\subsection{Sampling Rate}
+
+Sound is a continuous, analog signal, but we listen to digital sound all the
+time. Digital sound is ultimately coded as discrete units, or bits.
+
+The sampling rate (in seconds) is how often you record information. The sampling
+rate should be faster than the period of the fastest frequency you would like to
+be able to measure (otherwise you will have \textbf{aliasing errors}). 
+
+The \textbf{Nyquist Limit} is the highest frequency without any aliasing, which
+is equal to $\frac{1}{2}$ of the sampling rate. Since humans can hear up to
+about 20,000 Hz (20 kHz), we set the industry-standard sampling rate to 44.1 kHz.
+
+\subsection{Bit Rate}
+
+Bit rate refers to how many bits are recorded per second, which is the same as
+how sensitive the amplitude samples are, and how much data is used to encode the
+amplitude at each sample. This rate also must be sufficient, because if the
+recording is not sensitive enough, you will get a \textbf{quantization error}.
+
+Based on human hearing, recordings with 16-bits = $2^{16}$ levels is enough.
+
+\subsection{Dynamic Range}
+
+We must choose the correct range for our amplitude values. If the dynamic range
+is not large enough, we will get \textbf{clipping} errors. If the range is too
+large, \ie the source sound is too soft, we will also get quantization errors.
+
+\section{Software for Digitizing Sound}
+
+We use Praat. The homework is to use Praat to record ourselves singing the ABC
+song.
+
+\end{document}

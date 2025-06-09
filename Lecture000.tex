@@ -1,0 +1,184 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{hyperref}
+\usepackage{tikz}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{enumitem}
+\usepackage{wasysym}
+\usepackage{ulem}
+\usepackage{xspace}
+\usepackage{booktabs}
+\usepackage{physics}
+
+\ifPDFTeX % ensure generation of machine readable output
+\input{glyphtounicode}
+\pdfgentounicode=1
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\fi
+
+\usepackage{csquotes}
+
+\DeclareMathOperator{\dist}{dist}
+\DeclareMathOperator{\Nul}{Nul}
+\DeclareMathOperator{\Row}{Row}
+\DeclareMathOperator{\proj}{proj}
+
+\setlength{\arraycolsep}{12pt}
+
+\newcommand{\Eg}{\textbf{Eg.}\xspace}
+\newcommand{\Ex}{\textbf{Ex.}\xspace}
+\newcommand{\Ie}{\textbf{I.e.}\xspace}
+\newcommand{\bigEps}{\mathcal{E}}
+\newcommand{\bproof}{\textit{Proof ($\impliedby$).}\xspace}
+\newcommand{\defn}{\textbf{Def.}\xspace}
+\newcommand{\eg}{\textbf{e.g.}\xspace}
+\newcommand{\ex}{\textbf{ex.}\xspace}
+\newcommand{\fproof}{\textit{Proof ($\implies$).}\xspace}
+\newcommand{\ie}{\textbf{i.e.}\xspace}
+\newcommand{\lemma}{\textit{Lemma}\xspace}
+\newcommand{\soln}{\textit{Soln.}\xspace}
+\newcommand{\thm}{\textbf{Thm.}\xspace}
+
+\renewcommand{\arraystretch}{1.25} % Adjust row spacing
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=blue,      
+    urlcolor=blue,
+}
+
+\newcommand{\ulhref}[2]{\href{#1}{\color{blue}\uline{#2}}}
+
+\begin{document}
+
+\title{LING 190 Lecture 0 - Introduction}
+\author{Alexander Ng}
+\date{May 12, 2025}
+
+\maketitle
+
+\section{Introduction}
+
+\subsection{Why should you care?}
+
+\begin{itemize}
+  \item Speech carries lots of information
+  \item We are living in the information age
+  \item Know the \textit{medium} of your information
+\end{itemize}
+
+Now, because of new technologies that allow for high-quality deepfakes, we
+should be concerned about the \textit{source} of our information. Both speech
+and video deepfakes exist.
+
+\subsection{Who is your instructor?}
+
+Henny Yeung, an Associate Professor in Linguistics. He is a doctor in 
+Philosophy(huh?)
+
+\section{Important Information}
+
+\subsection{Office Hours}
+Wednesday 10AM - 11AM on Zoom, RCB 9204, or by appointment.
+
+\subsection{Communication}
+Use the \textbf{Canvas Messaging System} to communicate with both the instructor
+and TAs.
+
+\subsection{Course Structure Information}
+
+\begin{itemize}
+  \item Online Lectures are Asynchronous Video Lectures (watch them before the
+    next class)
+  \item Course engagement is measured by:
+    \begin{enumerate}
+      \item Intro discussion
+      \item Syllabus Quiz based on the syllabus (due Wednesday, April 14)
+      \item End-of-course survey (due at end of course)
+    \end{enumerate}
+  \item Homework - 2.4\% each, 12\% total
+    \begin{itemize}
+      \item 5 assignments due at the beginning of each class, consisting of 
+        practice problems for each quiz.
+      \item Open-note
+      \item Group-work encouraged
+    \end{itemize}
+  \item In-class Quizzes - 9-12\% each
+    \begin{itemize}
+      \item Cumulative (There may be 1 or 2 questions from previous lectures)
+      \item Done in-person at the beginning of each class (closed-notes)
+      \item Problems are similar to ones encountered in the homework sets.
+    \end{itemize}
+  \item Final Exam (June 23rd, 10:30AM - 12:20PM, room pending) - 30\%
+  \item Final Project (June 30th)
+    \begin{itemize}
+      \item Group Option:
+        \begin{itemize}
+          \item (3-5 People)
+          \item Narrated Presentation
+        \end{itemize}
+      \item Individual Option:
+        \begin{itemize}
+          \item Short literature review (5 pages)
+        \end{itemize}
+    \end{itemize}
+  \item Bonus Group Quiz
+    \begin{itemize}
+      \item Group quizz - repeat of the same in-class quiz, except done in
+        groups of 2-3 people, which count as bonus marks (up to 3\% over the
+        entire course).
+    \end{itemize}
+\end{itemize}
+
+\section{Why should I take this class}
+
+We will be learning about the IPA, how to describe speech sounds, how to improve
+evaluations of claims made about speech and understanding how knowing about the 
+science of speech can help you.
+
+\begin{enumerate}
+  \item Basic Phonetics
+    \begin{enumerate}
+      \item Acoustics of speech
+      \item Mechanisms of the Vocal Tract
+        We have extremely sophisticated control over the vocal tract, especially
+        the lips, tongue, and throat, which is what allows for speech in the
+        first place.
+      \item Phonetic Descriptions (International Phonetic Alphabet)
+        \begin{itemize}
+          \item How to describe sounds using anatomical landmarks
+        \end{itemize}
+    \end{enumerate}
+  \item 
+  \item Evaluating Claims about Speech Science
+    \begin{enumerate}
+      \item Can you change your accent?
+        Accent coaching or accent therapy (for actors, etc.)
+      \item At what age do you start to learn certain speech sounds?
+      \item Can you \enquote{cure} stuttering? How would you do this?
+      \item Is there such a thing as a \enquote{voice print} - or unique
+        identifier - of your voice?
+    \end{enumerate}
+  \item Applying speech science in everyday life
+    \begin{enumerate}
+      \item Apply content knowledge to solve problems
+        \begin{itemize}
+          \item Environmental noise
+          \item How to write \enquote{pronunciation}
+          \item How to safeguard your voice
+        \end{itemize}
+      \item Acquire the tools necessary to further independent study in speech
+        science
+    \end{enumerate}
+\end{enumerate}
+
+\end{document}
