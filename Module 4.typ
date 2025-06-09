@@ -114,8 +114,7 @@ How to describe English meanings _besides_ consonants and vowels
 that are larger than a single 'segment' (a segment is a consonant or vowel).
 This includes:
 - Lexical stress
-- Rhythm
-- Intonation
+- Rhythm and Intonation
 
 == Syllables and Lexical Stress
 
@@ -139,8 +138,145 @@ words. In this course, we will only focus on primary stress.
   _higher pitched_.
 - Most, but not all, unstressed syllables have vowel reduction to the
   mid-central vowel, /#praat(`\sw`)/ (schwa, may be rhoticized).
-  - 
+  - For example, consider the word "contrast".
+    - CONtrast: /#praat(`k\ctn.t\sh\rl\aest`)/ becomes 
+    - conTRAST: /#praat(`k\swn.t\sh\rl\aest`)/ when stressed. Note that the
+      vowel /#praat(`\ct`)/ is reduced to /#praat(`\sw`)/. This reduction is so
+      common that the symbol /#praat(`\sw`)/ has a common name: the schwa.
+  - There are some exceptions to this vowel reduction rule. The word "discount"
+    just moves the stress without reducing the vowel:
+    - DIScount: /#praat(`'d\ics.ka\hsnt`)/ becomes
+    - disCOUNT: /#praat(`d\ics.'ka\hsnt`)/
 
-// video paused 30:22
+== Rhythm and Intonation
+
+=== Stress Patterns (important for learning about rhythm later)
+
+*P* abbreviates a primary stress and *U* abbreviates an unstressed syllable.
+// #image("stress patterns.jpg")
+
+
+#table(
+  columns: (auto, auto, auto, auto, 1fr),
+  inset: 10pt,
+  align: horizon,
+  table.header(
+    [*Pattern Name*], [*Pattern*], [*Count*], [*Freq (Tokens/M)*], [*Example*],
+  ),
+  [trochaic],   [PU],     [3624], [67693],  [table],
+  [dactylic],   [PUU],    [2619], [24558],  [yesterday],
+  [],           [UPU],    [1510], [15278],     [tomorrow],
+  [],           [UPUU],   [1331], [9014],  [majority],
+  [],           [UUPU],   [1017], [6831],   [unexpected],
+  [iambic],     [UP],     [995],  [19881\*],   [guitar],
+  [],           [PUUU],   [497],  [3549],  [],
+  [anapaestic], [UUP],    [369],  [1398],   [understand],
+  [],           [UUUP],   [37],   [97], []
+)
+
+- \*: Some words, particularly iambic words, have a high frequency of usage
+  despite a smaller number of them existing in the English lexicon.
+  - trochis, datcyls and iambs occur very commonly in English.
+
+=== Speech Rhythm and Intonation
+
+- *Rhythm*: how the duration of speech sounds change in a sentence
+- *Intonation*: Variation in pitch (whether something is rising or falling), 
+  used in spoken utterances
+  - *Utterance*: a string of speech that begins and ends with a *pause*.
+    Typically, this corresponds to a sentence, but sometimes, if the speaker is
+    speaking multiple sentences without stopping, that would be considered one
+    continuous utterance. Sentences can also be divided into multiple
+    utterances, depending on the speaker's pauses.
+  - Typically, we find iteration varies according to utterance, but may also
+    vary according to sentences.
+- *Intonation* and *rhythm* change together
+  - Unexpected patterns of intonation and rhythm sometimes give synthetic speech
+    an _artificial_ quality which some people can pick up on or find
+    distracting. 
+
+==== Speech Rhythm
+
+- *Stress timing*: utterance duration depends more on the number of stressed
+  syllables than the total number of syllables. (English, Dutch, Russian, Arabic)
+  - In English, the stressed syllables, because they last longer, contribute
+    heavily to the relative duration of the utterance. Two sentences with the
+    same number of stressed syllables, despite having different numbers of
+    syllables, will have a similar duration.
+  - This isn't _exactly_ true, but it is a good approximation.
+- *Syllable timing*: syllable duration depends more on the number of syllables
+  than the total number of stressed syllables. (French, Cantonese, Italian,
+  Spanish)
+  - I.e. sentences with the same number of syllables in a *syllable-timed*
+    language will have the same duration.
+
+#figure(
+  image("stress timing.jpg", width: 70%),
+  caption: [
+    Speech Rhythm Table for English
+  ]
+)
+
+=== Contrastive Stress
+
+Rhythm and intonation can be used together to create other kinds of meanings.
+The following is an example of *contrast*, where we take the same set of
+consonants and vowels, change the rhythm and intonation, and create new meanings
+which contrast from previous information/ideas.
+
+1. *I* never said he made that
+means something different than
+2. I *never* said he made that
+3. I never *said* he made that
+4. I never said *he* made that
+5. I never said he *made* that
+6. I never said he made *that*
+
+// video pausd 
 
 = Other Useful Diacritics in IPA
+
+1. Length of segments in IPA
+2. Voice quality and syllabification in IPA
+
+== Review of Important Diacritics (for narrow transcriptions and languages other than english)
+
+- #praat(`\as\~v`) = creaky voice (when speaker gets tired, end of phrases,
+  certain sociolinguistic dialects)
+- #praat(`\as\0v`) = voiceless vowel (e.g. potato =
+  [#praat(`p\^h\sw\0vt\^he\ic\fho`)], common after aspirated stops)
+- #praat(`\as\~^`) = nasalized (e.g. in French broad transcriptions)
+- #praat(`p\^h`) = aspirated - comes from leaving the vocal folds open longer,
+  when voiceless stops are at the beginning of a word in English
+
+== Vowel Length [:]
+
+Length is useful to describe segments, especially in narrow transcriptions. We
+write narrow transcriptions using [brackets] instead of /slashes/.
+
+
+- In Canadian English, vowel length is not a meaningful distinction
+  - 'bid' = you could pronounce #praat(`[b\ic\:fd]`) or #praat(`[b\icd]`), and
+    both have the same meaning.
+- In other dialects or languages, vowel length is important
+  - Australian English:
+    - 'bead' could be pronounced #praat(`[b\icd]`), but
+    - #praat(`[b\ic\:fd]`) means "beard."
+    - Australian English pronounces the "Near-close near-front unrounded vowel"
+      /#praat(`\ic`)/ differently than in Canadian English.
+  - In Estonian, a 3-way length contrast:
+    - #praat(`[sa\:f\:fda]`) 'to get'
+    - #praat(`[sa\:fda]`) 'send [imp.]'
+    - #praat(`[sada]`) 'hundred'
+
+== Consonant Length [:]
+
+- Phonemic in Japanese
+- Only useful for narrow transcriptions in north American English
+  - can be used at a word boundary
+    - "stop Paul" = #praat(`[st\as.p\:f\ctl]`), but
+    - "stop all" = #praat(`[st\as.p\ctl]`)
+  - When you combine morphemes within a word,
+    - "known" = #praat(`[no\hsn]`), but
+    - "unknown" = #praat(`[\vtn\:fo\hsn]`)
+    - *morphemes* are prefixes or suffixes
