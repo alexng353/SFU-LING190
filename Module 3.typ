@@ -34,7 +34,7 @@ This lecture will only be focused on IPA consonants.
 == Broad vs. Narrow Phonetic Transcriptions/Descriptions
 
 Narrow transcriptions give more detail, but are unnecessary when describing
-english transcriptions.
+English transcriptions.
 
 - A broad transcription indicates only contrastive sounds
 - Narrow transcriptions include descriptions of phonetic details to show how a
@@ -49,16 +49,16 @@ english transcriptions.
   table.header(
     [], [*PULMONIC*], [*GLOTTALIC*], [*VELARIC*],
   ),
-  [*EGRESSIVE*], [most common\ in english], 
-  [not used in\ english], [physically impossible\ (to non-experts)],
+  [*EGRESSIVE*], [most common\ in English], 
+  [not used in\ English], [physically impossible\ (to non-experts)],
 
-  [*INGRESSIVE*], [not used\ _linguistically_\ in english],
-  [not used in\ english], [not used\ linguistically in\ english]
+  [*INGRESSIVE*], [not used\ _linguistically_\ in English],
+  [not used in\ English], [not used\ linguistically in\ English]
 )
 
 == An unnecessarily precise description of 'p':
 
-pulmonic egressive voiceless aspirated bilabial oral stop
+"A pulmonic egressive voiceless aspirated bilabial oral stop"
 
 - with the narrow transcription: [#praat(`p\^h`)]
 
@@ -85,6 +85,28 @@ voicing + place of articulation + manner of articulation. I.e., /p/ is a
 // video paused 15:23
 
 = IPA Consonants (From the Perspective of English)
+
+- We want to link the vocal tract with IPA consonants
+- How to describe and transcribe all English consonants using broad
+  transcription
+
+English *only* uses *Pulmonic Egressive* sounds. This means that we only use
+sounds that are produced by pushing air *outwards* through the vocal tract using
+the lungs.
+
+== Levels of description needed for English IPA
+
+- *Airstream* -- not necessary, since English only uses pulmonic egressive
+- *Larynx/Glottis (Voicing)* -- the action of the vocal folds
+- *Manner* -- the amount of closure achieved by active and passive articulators
+- *Place* -- location of active and passive articulators
+
+=== Larynx
+
+- *Voicing* -- vibration of the vocal chords while making another superlaryngeal
+  vocal tract closure.
+  - Vibration of larynx indicates voicing, for example, the consonant /z/ is
+    voiced and /s/ is unvoiced. (Voiced consonants vibrate the vocal folds).
 
 === Affricates
 
